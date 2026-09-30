@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Project Python</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}"
+                     alt="Logo">
+
+                <h2>PROJECT PYTHON</h2>
+            </div>
+
+            <nav class="sidebar-menu">
+
+                <a href="/dashboard" class="menu-item active">
+                    <span>🏠</span>
+                    Dashboard
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span>📊</span>
+                    Data
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span>📈</span>
+                    Analisis
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span>⚙️</span>
+                    Pengaturan
+                </a>
+
+                <a href="/logout" class="menu-item logout">
+                    <span>🚪</span>
+                    Logout
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Selamat datang di sistem Project Python</p>
+                </div>
+
+                <div class="user-info">
+                    <span>👤</span>
+                    <strong>{{ username }}</strong>
+                </div>
+
+            </header>
+
+
+            <!-- Welcome -->
+            <section class="welcome-card">
+
+                <div>
+                    <h2>Halo, {{ username }}! 👋</h2>
+
+                    <p>
+                        Selamat datang di halaman dashboard.
+                        Silakan gunakan menu yang tersedia untuk
+                        mengelola dan menganalisis data.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- Statistics -->
+            <section class="stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon">📦</div>
+
+                    <div>
+                        <p>Total Data</p>
+                        <h2>0</h2>
+                    </div>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+
+                    <div>
+                        <p>Data Diproses</p>
+                        <h2>0</h2>
+                    </div>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+
+                    <div>
+                        <p>Hasil Analisis</p>
+                        <h2>0</h2>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- Content -->
+            <section class="content-card">
+
+                <h2>Informasi Sistem</h2>
+
+                <p>
+                    Dashboard ini dapat digunakan sebagai halaman utama
+                    untuk aplikasi pengolahan dan analisis data menggunakan
+                    Python.
+                </p>
+
+                <div class="info-box">
+                    <strong>Status Sistem</strong>
+                    <span class="status-online">● Online</span>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
